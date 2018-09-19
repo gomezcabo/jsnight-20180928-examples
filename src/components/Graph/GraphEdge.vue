@@ -6,8 +6,7 @@ export default {
     this.cy.add({
       group: 'edges',
       id: this.edge.id,
-      data: { ...this.edge },
-      classes: this.edge.label ? 'label' : null
+      data: { ...this.edge }
     })
   },
 

@@ -9,8 +9,8 @@
           :node="node"
         />
         <GraphEdge
-          v-for="(edge, index) in edges"
-          :key="`${edge.source}-${edge.target}-${index}`"
+          v-for="edge in edges"
+          :key="`${edge.source}-${edge.target}`"
           :cy="cy"
           :edge="edge"
         />
@@ -60,11 +60,6 @@ export default {
 </script>
 
 <style>
-body {
-  margin: 0;
-  padding: 0;
-}
-
 #app {
   display: flex;
   flex-direction: column;

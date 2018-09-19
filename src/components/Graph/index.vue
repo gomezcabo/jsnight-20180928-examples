@@ -29,7 +29,8 @@ export default {
       this.cyInstance
         .makeLayout({
           name: 'dagre',
-          rankDir: 'LR'
+          rankDir: 'TB',
+          nodeSep: 150
         })
         .run()
     })
