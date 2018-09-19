@@ -2,11 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-import LodashPlugin from './plugins/lodash'
+import moment from 'moment'
 
 Vue.config.productionTip = false
 
-Vue.use(LodashPlugin)
+Vue.prototype.$moment = moment
 
 /* eslint-disable no-new */
 new Vue({
