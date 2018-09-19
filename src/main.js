@@ -2,8 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import LodashPlugin from './plugins/lodash'
 
 Vue.config.productionTip = false
+
+Vue.use(LodashPlugin)
 
 /* eslint-disable no-new */
 new Vue({
