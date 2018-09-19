@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-    <HelloWorld/>
+    <h2>Date:</h2>
+    <DatePicker date-format="dd/mm/yy" @update-date="alertDate"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import DatePicker from './components/DatePicker'
 
 export default {
   name: 'App',
+  methods: {
+    alertDate(date) {
+      alert(`Selected date: ${date}`)
+    }
+  },
   components: {
-    HelloWorld
+    DatePicker
   }
 }
 </script>
