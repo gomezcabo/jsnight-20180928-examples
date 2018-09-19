@@ -6,6 +6,7 @@
 /* global $ */
 export default {
   props: ['dateFormat'],
+
   mounted() {
     $(this.$el).datepicker({
       dateFormat: this.dateFormat,
@@ -14,6 +15,7 @@ export default {
       }
     })
   },
+
   beforeDestroy() {
     $(this.$el).datepicker('destroy')
   }

@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <h2>Date:</h2>
-    <DatePicker date-format="dd/mm/yy" @update-date="alertDate"/>
+    <DatePicker
+      date-format="dd/mm/yy"
+      @update-date="alertDate"
+    />
   </div>
 </template>
 
