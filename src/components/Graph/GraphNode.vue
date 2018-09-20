@@ -1,9 +1,10 @@
 <script>
 export default {
-  props: ['cy', 'node'],
+  props: ['node'],
+  inject: ['graphState'],
 
   mounted() {
-    this.cy.add({
+    this.graphState.cyInstance.add({
       group: 'nodes',
       id: this.node.id,
       data: { ...this.node }

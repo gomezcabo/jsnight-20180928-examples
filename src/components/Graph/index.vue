@@ -1,7 +1,7 @@
 <template>
   <div>
-    <template v-if="cyInstance">
-      <slot :cy="cyInstance"></slot>
+    <template v-if="sharedState.cyInstance">
+      <slot></slot>
     </template>
   </div>
 </template>
@@ -12,21 +12,28 @@ import dagre from 'cytoscape-dagre'
 import GraphStyles from './GraphStyles'
 
 export default {
+  provide() {
+    return {
+      graphState: this.sharedState
+    }
+  },
   data() {
     return {
-      cyInstance: null
+      sharedState: {
+        cyInstance: null
+      }
     }
   },
   mounted() {
     cytoscape.use(dagre)
 
-    this.cyInstance = cytoscape({
+    this.sharedState.cyInstance = cytoscape({
       container: this.$el,
       style: GraphStyles
     })
 
-    this.cyInstance.on('add', () => {
-      this.cyInstance
+    this.sharedState.cyInstance.on('add', () => {
+      this.sharedState.cyInstance
         .makeLayout({
           name: 'dagre',
           rankDir: 'TB',
