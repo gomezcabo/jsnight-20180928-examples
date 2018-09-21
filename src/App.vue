@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Graph from './components/Graph'
+import Graph from './components/Graph/Graph'
 import GraphNode from './components/Graph/GraphNode'
 import GraphEdge from './components/Graph/GraphEdge'
 
