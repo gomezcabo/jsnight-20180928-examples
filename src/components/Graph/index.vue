@@ -1,6 +1,6 @@
 <template>
   <div>
-    <template v-if="sharedState.cyInstance">
+    <template v-if="graphSharedState.cyInstance">
       <slot></slot>
     </template>
   </div>
@@ -14,12 +14,12 @@ import GraphStyles from './GraphStyles'
 export default {
   provide() {
     return {
-      graphState: this.sharedState
+      graphSharedState: this.graphSharedState
     }
   },
   data() {
     return {
-      sharedState: {
+      graphSharedState: {
         cyInstance: null
       }
     }
@@ -27,13 +27,13 @@ export default {
   mounted() {
     cytoscape.use(dagre)
 
-    this.sharedState.cyInstance = cytoscape({
+    this.graphSharedState.cyInstance = cytoscape({
       container: this.$el,
       style: GraphStyles
     })
 
-    this.sharedState.cyInstance.on('add', () => {
-      this.sharedState.cyInstance
+    this.graphSharedState.cyInstance.on('add', () => {
+      this.graphSharedState.cyInstance
         .makeLayout({
           name: 'dagre',
           rankDir: 'TB',
