@@ -10,7 +10,7 @@
         />
         <GraphEdge
           v-for="edge in edges"
-          :key="`${edge.source}-${edge.target}`"
+          :key="edge.id"
           :cy="cy"
           :edge="edge"
         />
@@ -28,26 +28,26 @@ export default {
   data() {
     return {
       nodes: [
-        { id: '1', label: 'Start' },
-        { id: '2', label: '4' },
-        { id: '3', label: '1' },
-        { id: '4', label: '8' },
-        { id: '5', label: '15' },
-        { id: '6', label: '23' },
-        { id: '7', label: '42' },
-        { id: '8', label: 'End' }
+        { id: 'N1', label: 'Start' },
+        { id: 'N2', label: '4' },
+        { id: 'N3', label: '1' },
+        { id: 'N4', label: '8' },
+        { id: 'N5', label: '15' },
+        { id: 'N6', label: '23' },
+        { id: 'N7', label: '42' },
+        { id: 'N8', label: 'End' }
       ],
       edges: [
-        { source: '1', target: '2' },
-        { source: '2', target: '3' },
-        { source: '3', target: '6' },
-        { source: '2', target: '4' },
-        { source: '4', target: '5' },
-        { source: '5', target: '4', label: '2' },
-        { source: '5', target: '6' },
-        { source: '6', target: '7' },
-        { source: '7', target: '7', label: '3' },
-        { source: '7', target: '8' }
+        { id: 'E1', source: 'N1', target: 'N2' },
+        { id: 'E2', source: 'N2', target: 'N3' },
+        { id: 'E3', source: 'N3', target: 'N6' },
+        { id: 'E4', source: 'N2', target: 'N4' },
+        { id: 'E5', source: 'N4', target: 'N5' },
+        { id: 'E6', source: 'N5', target: 'N4', label: '2' },
+        { id: 'E7', source: 'N5', target: 'N6' },
+        { id: 'E8', source: 'N6', target: 'N7' },
+        { id: 'E9', source: 'N7', target: 'N7', label: '3' },
+        { id: 'E10', source: 'N7', target: 'N8' }
       ]
     }
   },
