@@ -30,7 +30,7 @@ export default {
         .makeLayout({
           name: 'circle',
           rankDir: 'TB',
-          nodeSep: 380,
+          nodeSep: 380
         })
         .run()
     })

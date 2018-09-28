@@ -34,7 +34,7 @@ export default {
         { id: 'N3', label: 'BARRY' },
         { id: 'N5', label: 'SARA' },
         { id: 'N6', label: 'SAM' },
-        { id: 'N7', label: 'ME' },
+        { id: 'N7', label: 'ME' }
       ],
       edges: [
         { id: 'E1', source: 'N1', target: 'N2', label: 'son of' },
@@ -44,7 +44,7 @@ export default {
         { id: 'E6', source: 'N3', target: 'N6', label: 'cousin of' },
         { id: 'E5', source: 'N3', target: 'N5', label: 'cousin of' },
         { id: 'E7', source: 'N5', target: 'N6', label: 'sister of' },
-        { id: 'E8', source: 'N6', target: 'N7', label: 'attended Naboo University with' },
+        { id: 'E8', source: 'N6', target: 'N7', label: 'attended Naboo Universi' }
       ]
     }
   },
