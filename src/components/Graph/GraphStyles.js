@@ -4,7 +4,7 @@ export default [
     style: {
       width: '50',
       height: '50',
-      'font-size': 18,
+      'font-size': 13,
       'font-weight': 'bold',
       content: `data(label)`,
       'text-valign': 'center',

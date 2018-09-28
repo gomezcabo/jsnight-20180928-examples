@@ -28,9 +28,9 @@ export default {
     this.cyInstance.on('add', () => {
       this.cyInstance
         .makeLayout({
-          name: 'dagre',
+          name: 'circle',
           rankDir: 'TB',
-          nodeSep: 150
+          nodeSep: 380,
         })
         .run()
     })

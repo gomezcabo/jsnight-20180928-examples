@@ -28,26 +28,23 @@ export default {
   data() {
     return {
       nodes: [
-        { id: 'N1', label: 'Start' },
-        { id: 'N2', label: '4' },
-        { id: 'N3', label: '1' },
-        { id: 'N4', label: '8' },
-        { id: 'N5', label: '15' },
-        { id: 'N6', label: '23' },
-        { id: 'N7', label: '42' },
-        { id: 'N8', label: 'End' }
+        { id: 'N1', label: 'LUKE' },
+        { id: 'N2', label: 'VADER' },
+        { id: 'N4', label: 'ELLIE' },
+        { id: 'N3', label: 'BARRY' },
+        { id: 'N5', label: 'SARA' },
+        { id: 'N6', label: 'SAM' },
+        { id: 'N7', label: 'ME' },
       ],
       edges: [
-        { id: 'E1', source: 'N1', target: 'N2' },
-        { id: 'E2', source: 'N2', target: 'N3' },
-        { id: 'E3', source: 'N3', target: 'N6' },
-        { id: 'E4', source: 'N2', target: 'N4' },
-        { id: 'E5', source: 'N4', target: 'N5' },
-        { id: 'E6', source: 'N5', target: 'N4', label: '2' },
-        { id: 'E7', source: 'N5', target: 'N6' },
-        { id: 'E8', source: 'N6', target: 'N7' },
-        { id: 'E9', source: 'N7', target: 'N7', label: '3' },
-        { id: 'E10', source: 'N7', target: 'N8' }
+        { id: 'E1', source: 'N1', target: 'N2', label: 'son of' },
+        { id: 'E2', source: 'N2', target: 'N4', label: 'brother of' },
+        { id: 'E3', source: 'N2', target: 'N3', label: 'uncle of' },
+        { id: 'E4', source: 'N4', target: 'N3', label: 'aunt of' },
+        { id: 'E6', source: 'N3', target: 'N6', label: 'cousin of' },
+        { id: 'E5', source: 'N3', target: 'N5', label: 'cousin of' },
+        { id: 'E7', source: 'N5', target: 'N6', label: 'sister of' },
+        { id: 'E8', source: 'N6', target: 'N7', label: 'attended Naboo University with' },
       ]
     }
   },
